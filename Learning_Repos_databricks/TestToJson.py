@@ -23,7 +23,12 @@ spark.udf.register("usageToJson", usageToJson)
 # MAGIC %sql
 # MAGIC SELECT properties ,usageToJson(properties) as prop,get_json_object(usageToJson(properties),'$.userAgent'),get_json_object(usageToJson(properties),'$.requestId')
 # MAGIC FROM logs.databricksaudit
-# MAGIC limit 10
+# MAGIC limit 50
+
+# COMMAND ----------
+
+# MAGIC %sql 
+# MAGIC get_json 
 
 # COMMAND ----------
 
@@ -63,4 +68,5 @@ spark.udf.register("usageToJson", usageToJson)
 
 # COMMAND ----------
 
+select * from json_object (usage_propertise) $.useragent 
 
