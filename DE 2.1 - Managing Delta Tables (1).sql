@@ -266,7 +266,7 @@ select * from dbacademy_david_akokodaripon_take_net_dewd_2_1.student
 
 -- COMMAND ----------
 
-DROP TABLE students
+DROP TABLE dbacademy_david_akokodaripon_take_net_dewd_2_1.student
 
 -- COMMAND ----------
 
@@ -279,7 +279,7 @@ DROP TABLE students
 -- COMMAND ----------
 
 -- MAGIC %python
--- MAGIC DA.cleanup()
+-- MAGIC dbacademy_david_akokodaripon_take_net_dewd_2_1.cleanup()
 
 -- COMMAND ----------
 
